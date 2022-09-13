@@ -1,5 +1,5 @@
 let contents = document.getElementById('contents');
-let related = document.getElementById('related');
+let related = document.querySelector('#secondary #related');
 let header = document.querySelector('#header .ytd-rich-grid-renderer');
 
 const addListeners = function(){
