@@ -1,0 +1,29 @@
+{
+    "name" : "Focused",
+    "version" : "0.0.1",
+    "description": "Removes all recommended videos from youtube hompage",
+    "author": "abhisheksharmayt",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": {             
+          "16": "images/youtube16.png",  
+          "24": "images/youtube24.png",  
+          "32": "images/youtube32.png"    
+        },
+        "default_title": "Click Me",   
+        "default_popup": "index.html"
+    },
+    "icons" : {
+        "128" : "images/youtube128.png"
+    },
+    "manifest_version" : 3,
+    "permissions" : ["activeTab","storage","declarativeContent"],
+    "content_scripts": [
+        {
+            "matches" : ["https://*.youtube.com/*"],
+            "js" : ["content.js"]
+        }
+    ] 
+}
